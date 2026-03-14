@@ -4,29 +4,29 @@ name: Build disk images
 on:
   workflow_dispatch:
     inputs:
-      upload-to-s3:
-        description: "Upload to S3"
-        required: false
-        default: false
-        type: boolean
+      # upload-to-s3:
+      #   description: "Upload to S3"
+      #   required: false
+      #   default: false
+      #   type: boolean
       platform:
         required: true
         type: choice
         options:
           - amd64
-          - arm64
-  pull_request:
-    branches:
-      - main
-    paths:
-      - './disk_config/disk.toml'
-      - './disk_config/iso.toml'
-      - './.github/workflows/build-disk.yml'
+          # - arm64
+  # pull_request:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - './disk_config/disk.toml'
+  #     - './disk_config/iso.toml'
+  #     - './.github/workflows/build-disk.yml'
 
 env:
   IMAGE_NAME: ${{ github.event.repository.name }} # output of build.yml, keep in sync
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
-  DEFAULT_TAG: "latest"
+  DEFAULT_TAG: "stable"
   BIB_IMAGE: "ghcr.io/lorbuschris/bootc-image-builder:20250608" # "quay.io/centos-bootc/bootc-image-builder:latest" - see https://github.com/osbuild/bootc-image-builder/pull/954
 
 concurrency:
@@ -40,7 +40,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        disk-type: ["qcow2", "anaconda-iso"]
+        disk-type: ["anaconda-iso"]
     permissions:
       contents: read
       packages: read
