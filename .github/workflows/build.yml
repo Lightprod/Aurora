@@ -22,7 +22,7 @@ env:
   IMAGE_DESC: "A custom Aurora image for personal use. Based on Ublue's image template."
   IMAGE_KEYWORDS: "bootc,ublue,universal-blue,aurora"
   IMAGE_LOGO_URL: "https://avatars.githubusercontent.com/u/120078124?s=200&v=4"  # Put your own image here for a fancy profile on https://artifacthub.io/!
-  IMAGE_NAME: "${{ github.event.repository.name }}"  # output image name, usually same as repo name
+  IMAGE_NAME: "${{ github.event.repository.name }}-dx"  # output image name, usually same as repo name
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
   DEFAULT_TAG: "stable"
 
