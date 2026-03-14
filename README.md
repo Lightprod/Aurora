@@ -10,5 +10,5 @@ Based on `aurora-dx:stable-daily`
 
 #  How to use
 
-Rebase from any **KDE base bootc** image using `sudo bootc switch --transport ghcr.io/lightprod/aurora:stable-daily` then reboot.
+Rebase from any **KDE base bootc** image using `sudo bootc switch ghcr.io/lightprod/aurora-dx:stable-daily` then reboot.
 
