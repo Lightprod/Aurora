@@ -10,12 +10,16 @@ on:
       - 'disk_config/**'
   schedule:
     - cron: '00 10 * * *'  # 10:05am UTC everyday
-  # push:
-  #   branches:
-  #     - main
-  #   paths-ignore:
-  #     - '**/README.md'
-  #     - '.github/**'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**/README.md'
+      - '.github/**'
+      - 'disk_config/**'
+      - '**/JustFile'
+      - '**/LICENSE'
+      - '**/.gitignore'
   workflow_dispatch:
 
 env:
