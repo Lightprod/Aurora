@@ -22,9 +22,9 @@ log "Building image"
 # ======================================================================================
 # Defining variables
 
-REMOVE_PACKAGES=(
-    "sddm" # Not needed in F44
-)
+# REMOVE_PACKAGES=(
+    # "sddm" # Not needed in F44
+# )
 
 ADD_PACKAGES_FEDORA_REPO=(
     "gvfs-smb"
@@ -53,8 +53,8 @@ ADD_PACKAGES_TERRA_REPO=(
 # ======================================================================================
 #  Remove uneeded packages from Kinoite
 
-log "Removing packages..."
-    dnf5 remove --no-autoremove -y ${REMOVE_PACKAGES[@]}
+# log "Removing packages..."
+    # dnf5 remove --no-autoremove -y ${REMOVE_PACKAGES[@]}
 
 # ======================================================================================
 #  Enable fedora-multimedia repo
@@ -96,7 +96,7 @@ log "Installing wallpaper-engine-kde-plugi"
 # ====================================================================
 # Enable plasma login manager
 
-systemctl enable plasmalogin.service
+# systemctl enable plasmalogin.service
 
 log "Cleaning up dnf5..."
 
