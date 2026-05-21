@@ -73,14 +73,14 @@ log "Installing terra repo..."
 #  Install packages from fedora repos
 
 log "Installing packages from fedora repos..."
-    dnf5 install -y ${ADD_PACKAGES_FEDORA_REPO[@]} 
+    dnf5 install -y "${ADD_PACKAGES_FEDORA_REPO[@]}" 
 
 # ======================================================================================
 #  Install packages from terra repos
 
 log "Installing packages from Terra..."
     # dnf5 install --setopt install_weak_deps=False -y ${ADD_PACKAGES_TERRA_REPO[@]}
-    dnf5 install -y ${ADD_PACKAGES_TERRA_REPO[@]}
+    dnf5 install -y "${ADD_PACKAGES_TERRA_REPO[@]}"
 
 # ======================================================================================
 #  Enable wallpaper-engine-kde-plugin COPR Repo and install it
