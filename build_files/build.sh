@@ -23,14 +23,12 @@ log "Building image"
 # Defining variables
 
 # REMOVE_PACKAGES=(
-    # "sddm" # Not needed in F44
 # )
 
 ADD_PACKAGES_FEDORA_REPO=(
     "gvfs-smb"
     "atuin"
     "gparted"
-    "plasma-login-manager"
     "kvantum"
     "firefox"
     "firefox-langpacks"
@@ -51,7 +49,7 @@ ADD_PACKAGES_TERRA_REPO=(
 
 
 # ======================================================================================
-#  Remove uneeded packages from Kinoite
+#  Remove uneeded packages from Aurora
 
 # log "Removing packages..."
     # dnf5 remove --no-autoremove -y ${REMOVE_PACKAGES[@]}
@@ -79,7 +77,6 @@ log "Installing packages from fedora repos..."
 #  Install packages from terra repos
 
 log "Installing packages from Terra..."
-    # dnf5 install --setopt install_weak_deps=False -y ${ADD_PACKAGES_TERRA_REPO[@]}
     dnf5 install -y "${ADD_PACKAGES_TERRA_REPO[@]}"
 
 # ======================================================================================
@@ -94,9 +91,6 @@ log "Installing wallpaper-engine-kde-plugi"
     dnf5 install --skip-broken --skip-unavailable -y "wallpaper-engine-kde-plugin"
 
 # ====================================================================
-# Enable plasma login manager
-
-# systemctl enable plasmalogin.service
 
 log "Cleaning up dnf5..."
 
