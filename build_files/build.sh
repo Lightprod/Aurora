@@ -66,7 +66,7 @@ log "Enabling fedora-multimedia..."
 #  Install Terra repo
 
 log "Installing terra repo..."
-    dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+    # dnf5 install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 
 # ======================================================================================
 #  Install packages from fedora repos
@@ -85,7 +85,7 @@ log "Installing packages from Terra..."
 
 log "Enabling wallpaper-engine-kde-plugin repo..."
 
-    dnf5 copr enable -y "jackgreiner/wallpaper-engine-kde-plugin"
+    # dnf5 copr enable -y "jackgreiner/wallpaper-engine-kde-plugin"
 
 log "Installing wallpaper-engine-kde-plugi"
 
