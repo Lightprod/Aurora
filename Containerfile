@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/aurora-dx:stable-daily as aurora
+FROM ghcr.io/lightprod/aurora-dx:stable-daily as aurora
 
 COPY system_files /
 
