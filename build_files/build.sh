@@ -45,6 +45,7 @@ ADD_PACKAGES_TERRA_REPO=(
     "vesktop"
     "veracrypt"
     "codium"
+    "starship"
 )
 
 
