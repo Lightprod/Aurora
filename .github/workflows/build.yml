@@ -9,7 +9,7 @@ on:
       - '.github/**'
       - 'disk_config/**'
   schedule:
-    - cron: '00 10 * * *'  # 10:05am UTC everyday
+    - cron: '00 3 * * 2'  # 3:00am UTC every Tuesday
   push:
     branches:
       - main
@@ -28,7 +28,7 @@ env:
   IMAGE_LOGO_URL: "https://avatars.githubusercontent.com/u/120078124?s=200&v=4"  # Put your own image here for a fancy profile on https://artifacthub.io/!
   IMAGE_NAME: "${{ github.event.repository.name }}-dx"  # output image name, usually same as repo name
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
-  DEFAULT_TAG: "stable-daily"
+  DEFAULT_TAG: "stable"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
