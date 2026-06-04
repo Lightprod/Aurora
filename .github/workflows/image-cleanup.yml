@@ -1,0 +1,24 @@
+name: Clean older images
+on:
+#   schedule:
+#     - cron: '00 5 * * 2'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  cleanup-images:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    steps:
+      - uses: dataaxiom/ghcr-cleanup-action@v1
+        with:
+            package: aurora-dx
+            delete-orphaned-images: true
+            keep-n-tagged: 1
+            # keep-n-untagged: 0
+            older-than: 1 days
+            dry-run: false
