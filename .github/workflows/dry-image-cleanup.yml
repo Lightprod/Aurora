@@ -21,4 +21,4 @@ jobs:
             keep-n-tagged: 10
             keep-n-untagged: 10
             older-than: 90 days
-            dry-run: yes
+            dry-run: true
