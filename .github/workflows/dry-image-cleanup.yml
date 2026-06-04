@@ -19,7 +19,7 @@ jobs:
             package: aurora-dx
             delete-orphaned-images: true
             # delete-tags: stable-daily
-            # keep-n-tagged: 10
-            # keep-n-untagged: 10
+            keep-n-tagged: 1
+            # keep-n-untagged: 0
             older-than: 1 days
             dry-run: true
