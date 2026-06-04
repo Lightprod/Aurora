@@ -6,9 +6,9 @@
 
 This repo hold an custom version of Ublue's [Aurora](https://getaurora.dev/) project for my personal use, built using their [image-template](https://github.com/ublue-os/image-template). 
 
-Based on `aurora-dx:stable-daily`
+Based on `aurora-dx:stable`
 
 #  How to use
 
-Rebase from any **KDE base bootc** image using `sudo bootc switch ghcr.io/lightprod/aurora-dx:stable-daily` then reboot.
+Rebase from any **KDE base bootc** image using `sudo bootc switch ghcr.io/lightprod/aurora-dx:stable` then reboot.
 
