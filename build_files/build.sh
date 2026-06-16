@@ -33,7 +33,7 @@ ADD_PACKAGES_FEDORA_REPO=(
     "firefox"
     "firefox-langpacks"
     "firefoxpwa"
-    "filebot"
+    # "filebot"
     "zenity"
     "mediainfo"
     "steam"
@@ -78,6 +78,12 @@ log "Installing packages from fedora repos..."
 
 log "Installing packages from Terra..."
     dnf5 install -y "${ADD_PACKAGES_TERRA_REPO[@]}"
+
+# ======================================================================================
+#  Install filebot from their custom repo
+
+log "Installing filebot..."
+    dnf5 install --setopt=tsflags=noscripts -y filebot 
 
 # ======================================================================================
 #  Enable wallpaper-engine-kde-plugin COPR Repo and install it
