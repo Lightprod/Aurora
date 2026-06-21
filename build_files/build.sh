@@ -88,13 +88,13 @@ log "Installing filebot..."
 # ======================================================================================
 #  Enable wallpaper-engine-kde-plugin COPR Repo and install it
 
-log "Enabling wallpaper-engine-kde-plugin repo..."
+# log "Enabling wallpaper-engine-kde-plugin repo..."
 
-    dnf5 copr enable -y "jackgreiner/wallpaper-engine-kde-plugin"
+#     dnf5 copr enable -y "jackgreiner/wallpaper-engine-kde-plugin"
 
-log "Installing wallpaper-engine-kde-plugi"
+# log "Installing wallpaper-engine-kde-plugi"
 
-    dnf5 install --skip-broken --skip-unavailable -y "wallpaper-engine-kde-plugin"
+#     dnf5 install --skip-broken --skip-unavailable -y "wallpaper-engine-kde-plugin"
 
 # ====================================================================
 

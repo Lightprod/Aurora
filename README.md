@@ -12,3 +12,6 @@ Based on `aurora-dx:stable`
 
 Rebase from any **KDE base bootc** image using `sudo bootc switch ghcr.io/lightprod/aurora-dx:stable` then reboot.
 
+# Original template:
+
+https://github.com/Lightprod/Aurora/blob/main/template_README.md
