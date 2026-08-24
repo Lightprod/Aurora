@@ -1,28 +1,28 @@
 ---
 name: Build Aurora-dx
 on:
-  pull_request:
-    branches:
-      - main
-    paths-ignore:
-      - '.github/**'
-      - '**/*.md'
-      - 'disk_config/**'
-      - '**/JustFile'
-      - '**/LICENSE'
-      - '**/.gitignore'
-  schedule:
-    - cron: '00 3 * * 2'  # 3:00am UTC every Tuesday
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '.github/**'
-      - '**/*.md'
-      - 'disk_config/**'
-      - '**/JustFile'
-      - '**/LICENSE'
-      - '**/.gitignore'
+  # pull_request:
+  #   branches:
+  #     - main
+  #   paths-ignore:
+  #     - '.github/**'
+  #     - '**/*.md'
+  #     - 'disk_config/**'
+  #     - '**/JustFile'
+  #     - '**/LICENSE'
+  #     - '**/.gitignore'
+  # schedule:
+  #   - cron: '00 3 * * 2'  # 3:00am UTC every Tuesday
+  # push:
+  #   branches:
+  #     - main
+  #   paths-ignore:
+  #     - '.github/**'
+  #     - '**/*.md'
+  #     - 'disk_config/**'
+  #     - '**/JustFile'
+  #     - '**/LICENSE'
+  #     - '**/.gitignore'
   workflow_dispatch:
 
 env:
